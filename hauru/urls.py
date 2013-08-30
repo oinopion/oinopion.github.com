@@ -4,5 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^$', 'hauru.views.home'),
     url(r'^admin/', include(admin.site.urls)),
 )
