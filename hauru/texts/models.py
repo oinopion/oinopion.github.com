@@ -10,7 +10,7 @@ class Article(TimeStampedModel, StatusModel):
         ('published', _('published'))
     )
 
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=100)
-    text = models.TextField()
+    title = models.CharField(_('title'), max_length=200)
+    slug = models.SlugField(_('slug'), max_length=100)
+    text = models.TextField(_('text'))
 
