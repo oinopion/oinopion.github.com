@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <title>{% block title %}Hauru{% endblock %}</title>
+
+        <style>
+            body {
+                background: #282828;
+                color: #e2e2e5;
+                font-size: 2em;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            h1 { 
+                color: #b1d631; 
+                font-size: 220%; 
+                font-weight: normal;
+                margin: 0.9em 0.2em; 
+                border-bottom: 1px solid #555;
+            }
+            p { margin: 0.5em 0 0 1.1em }
+            a { color: #80a0ff; text-decoration: none }
+            span { color: #7e8aa2;}
+        </style>
+        <link href='//fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        {% block body %}
+        {% endblock %}
+     </body>
+ </html>
