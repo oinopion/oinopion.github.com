@@ -5,5 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'hauru.views.home'),
+    url(r'^texts/', include('hauru.texts.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
