@@ -1,4 +1,5 @@
 {% extends 'skeleton.html' %}
+{% load markdown_tags %}
 
 {% block title %}
     {{ article.title }} | {{ block.super }}
@@ -6,6 +7,6 @@
 
 {% block body %}
     <article>
-        {{ article.text }}
+        {% markdown article.text %}
     </article>
 {% endblock %}
