@@ -62,6 +62,8 @@ if not DEBUG:
     )
 
 STATICFILES_DIRS = [os.path.join(BASE, 'static')]
+STATICFILES_STORAGE = \
+    'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE, 'public')
 STATIC_URL = '/static/'
 
