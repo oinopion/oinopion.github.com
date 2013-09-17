@@ -1,4 +1,4 @@
-{% extends 'skeleton.html' %}
+{% extends 'base.html' %}
 {% load markdown_tags %}
 
 {% block title %}
@@ -7,6 +7,11 @@
 
 {% block body %}
     <article>
+        <h1>{{ article.title }}</h1>
+        <p class="time">
+            <time>{{ article.created|date:"F Y" }}</time>
+        </p>
         {% markdown article.text %}
     </article>
+    <hr class="qued">
 {% endblock %}

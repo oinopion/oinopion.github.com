@@ -3,12 +3,12 @@ from .models import Article
 
 
 class ArticleView(DetailView):
-    model = Article
+    queryset = Article.published.all()
     context_object_name = 'article'
 
 
 class ArticleListView(ListView):
-    model = Article
+    queryset = Article.published.all()
     context_object_name = 'articles'
 
 
