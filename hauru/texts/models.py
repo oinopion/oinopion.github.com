@@ -9,7 +9,7 @@ from model_utils.models import TimeStampedModel, StatusModel
 class Article(TimeStampedModel, StatusModel):
     STATUS = Choices(
         ('draft', _('draft')),
-        ('published', _('published'))
+        ('published', _('published')),
     )
 
     title = models.CharField(_('title'), max_length=200)

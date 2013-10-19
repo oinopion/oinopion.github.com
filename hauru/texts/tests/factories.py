@@ -16,3 +16,7 @@ Nechť již hříšné saxofony ďáblů rozzvučí síň úděsnými tóny walt
 quickstepu. Ó, náhlý déšť teď zvířil prach a čilá laň běží s houfcem gazel k
 úkrytům. Hleď, toť přízračný kůň v mátožné póze šíleně úpí.
 """
+
+
+class PublishedArticleFactory(ArticleFactory):
+    status = models.Article.STATUS.published
