@@ -20,3 +20,7 @@ quickstepu. Ó, náhlý déšť teď zvířil prach a čilá laň běží s houf
 
 class PublishedArticleFactory(ArticleFactory):
     status = models.Article.STATUS.published
+
+
+class DraftArticleFactory(ArticleFactory):
+    status = models.Article.STATUS.draft

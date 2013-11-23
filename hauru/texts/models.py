@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import permalink
+from django.core import signing
 from django.utils.translation import ugettext_lazy as _
 from model_utils import Choices
 from model_utils.managers import QueryManager
@@ -19,9 +20,21 @@ class Article(TimeStampedModel, StatusModel):
     objects = models.Manager()
     published = QueryManager(status=STATUS.published)
 
+    signer = signing.TimestampSigner(salt="article")
+
     class Meta:
         ordering = ('-created',)
 
     @permalink
     def get_absolute_url(self):
-        return 'article', (), {'slug': self.slug}
+        return 'article_detail', (), {'slug': self.slug}
+
+    def signed_id(self):
+        return self.signer.sign(str(self.pk))
+
+    def is_signed_id(self, signature):
+        try:
+            pk = self.signer.unsign(signature)
+            return str(self.pk) == pk
+        except signing.BadSignature:
+            return False

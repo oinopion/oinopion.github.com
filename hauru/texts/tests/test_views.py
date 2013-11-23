@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .factories import ArticleFactory, PublishedArticleFactory
+from .factories import ArticleFactory, PublishedArticleFactory, DraftArticleFactory
 
 
 class ArticleViewTest(TestCase):
@@ -36,3 +36,22 @@ class ArticleListViewTest(TestCase):
         resp = self.client.get(self.url())
         self.assertContains(resp, published.title)
         self.assertNotContains(resp, draft.title)
+
+
+class ArticlePreviewViewTest(TestCase):
+    def url(self, article, signature=None):
+        signature = signature or article.signed_id()
+        return '/texts/%s/%s/' % (article.slug, signature)
+
+    def test_renders_template(self):
+        article = DraftArticleFactory.create()
+        resp = self.client.get(self.url(article))
+        self.assertEqual(200, resp.status_code)
+        self.assertTemplateUsed(resp, 'texts/article_detail.html')
+        self.assertIn('article', resp.context)
+
+    def test_404_for_bad_signature(self):
+        article = DraftArticleFactory.create()
+        resp = self.client.get(self.url(article, 'bad-signature'))
+        self.assertEqual(404, resp.status_code)
+
