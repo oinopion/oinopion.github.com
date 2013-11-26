@@ -8,8 +8,13 @@
 {% block body %}
     <article>
         <h1>{{ article.title }}</h1>
-        <p class="time">
-            <time>{{ article.created|date:"F Y" }}</time>
+
+        <p class="byline">
+            {% if article.is_published %}
+                <time>{{ article.created|date:"F Y" }}</time>
+            {% else %}
+                <time>This article has not been published yet</time>
+            {% endif %}
         </p>
         {% markdown article.text %}
     </article>

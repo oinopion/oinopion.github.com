@@ -59,10 +59,14 @@ a:visited {
     background: #fefefe;
 }
 
-.time {
+.byline {
     margin-right: 0.5em;
     color: #aaa;
     font-size: 80%;
+}
+
+.attention {
+    color: #FF0000;
 }
 
 .articles {

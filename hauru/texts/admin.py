@@ -9,6 +9,8 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'title', 'slug')
     list_filter = ('status',)
     search_fields = ('title', 'slug')
+    readonly_fields = ('status_changed', 'modified')
+    fields = ('title', 'status', 'slug', 'created', 'text', 'status_changed', 'modified')
 
 
 admin.site.register(Article, ArticleAdmin)
