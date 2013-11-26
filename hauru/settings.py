@@ -2,9 +2,12 @@
 import os
 import configparser
 import dj_database_url
+from django.core.exceptions import ImproperlyConfigured
 
 BASE = os.path.dirname(os.path.dirname(__file__))
-CONFIG_PATH = os.path.join(BASE, 'hauru.conf')
+CONFIG_PATH = os.path.join(BASE, 'conf', 'hauru.conf')
+if not os.path.exists(CONFIG_PATH):
+    raise ImproperlyConfigured('Could not read config: %s' % CONFIG_PATH)
 
 config = configparser.ConfigParser()
 config.read(CONFIG_PATH)

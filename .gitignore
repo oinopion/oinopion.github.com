@@ -1,5 +1,6 @@
 *.pyc
-hauru.conf
+conf/hauru.conf
+conf/gun.py
 public
 media
 venv
