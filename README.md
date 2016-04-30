@@ -1,4 +1,4 @@
-Hello, this is my private web site software
-===========================================
+My personal website
+===================
 
-It's Django app, because I don't like static pages :-)
+This is just a simple static HTML page with couple of links.
