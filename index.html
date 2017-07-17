@@ -17,28 +17,36 @@
                  url('fonts/josefin-sans-v9-latin-regular.woff') format('woff');
         }
 
+        html { font-size: 150%; }
+        @media (min-width: 750px) {
+            html { font-size: 180%; }
+        }
+        @media (min-width: 1000px) {
+            html { font-size: 260%; }
+        }
+
         body {
             background: #282828;
             color: #e2e2e5;
-            font-size: 2em;
             font-family: 'Josefin Sans', sans-serif;
+            margin: 1rem;
         }
 
         h1 {
             color: #b1d631;
-            font-size: 220%;
-            margin: 0.9em 0.2em;
+            font-size: 2rem;
+            margin: 1rem 0;
             border-bottom: 1px solid #555;
             font-weight: normal;
         }
 
         p {
-            margin: 0.5em 0 0 1.1em
+            margin: 0.5rem;
         }
 
         a {
             color: #80a0ff;
-            text-decoration: none
+            text-decoration: none;
         }
 
         span {
