@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Tomek Paczkowski - Software developer, geek and technology enthusiast. Find me on Twitter and GitHub.">
+    <meta name="description"
+        content="Tomek Paczkowski - Software developer, geek and technology enthusiast. Find me on Twitter and GitHub.">
 
     <title>Tomek Paczkowski</title>
 
@@ -13,16 +15,24 @@
             font-style: normal;
             font-weight: 400;
             src: local('Josefin Sans'), local('JosefinSans'),
-                 url('fonts/josefin-sans-v9-latin-regular.woff2') format('woff2'),
-                 url('fonts/josefin-sans-v9-latin-regular.woff') format('woff');
+                url('fonts/josefin-sans-v9-latin-regular.woff2') format('woff2'),
+                url('fonts/josefin-sans-v9-latin-regular.woff') format('woff');
         }
 
-        html { font-size: 150%; }
-        @media (min-width: 750px) {
-            html { font-size: 180%; }
+        html {
+            font-size: 150%;
         }
+
+        @media (min-width: 750px) {
+            html {
+                font-size: 180%;
+            }
+        }
+
         @media (min-width: 1000px) {
-            html { font-size: 260%; }
+            html {
+                font-size: 260%;
+            }
         }
 
         body {
@@ -53,6 +63,16 @@
             color: #7e8aa2;
         }
     </style>
+
+    <script>
+        !function () {
+            var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+                analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); analytics.push(t); return analytics } }; for (var e = 0; e < analytics.methods.length; e++) { var t = analytics.methods[e]; analytics[t] = analytics.factory(t) } analytics.load = function (e, t) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + e + "/analytics.min.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a); analytics._loadOptions = t }; analytics.SNIPPET_VERSION = "4.1.0";
+                analytics.load("AMDPQnLdN4DTHFkoBWnreZ1w5G1mutoD");
+                analytics.page();
+            }
+        }();
+    </script>
 </head>
 
 <body>
@@ -60,15 +80,15 @@
     <h1>Tomek Paczkowski</h1>
 
     <p>Principal Engineer at <a href="https://pollen.co">Pollen</a>
-    <p>Geek and technology enthusiast
+        <p>Geek and technology enthusiast
 
-    <p><span>GitHub:</span>
-        <a href="https://github.com/oinopion">oinopion</a>
-    <p><span>Twitter:</span>
-        <a href="https://twitter.com/oinopion">@oinopion</a>
-    <p><span>Email:</span>
-        <a href="mailto:tomek@hauru.eu">tomek@hauru.eu</a>
+            <p><span>GitHub:</span>
+                <a href="https://github.com/oinopion">oinopion</a>
+                <p><span>Twitter:</span>
+                    <a href="https://twitter.com/oinopion">@oinopion</a>
+                    <p><span>Email:</span>
+                        <a href="mailto:tomek@hauru.eu">tomek@hauru.eu</a>
 
 </body>
-</html>
 
+</html>
